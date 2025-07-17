@@ -34,7 +34,7 @@
       border-radius: 6px;
     }
 
-    button, .botao-agendar {
+    button {
       margin-top: 25px;
       padding: 12px;
       background-color: #0b3d4e;
@@ -45,12 +45,9 @@
       font-weight: bold;
       width: 100%;
       font-size: 16px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
     }
 
-    button:hover, .botao-agendar:hover {
+    button:hover {
       background-color: #09526a;
     }
 
@@ -91,11 +88,6 @@
   <button onclick="calcular()">Calcular Gasto Calórico</button>
 
   <div id="resultado"></div>
-
-  <!-- Botão de agendamento -->
-  <a class="botao-agendar" href="https://tally.so/r/mB96JR" target="_blank">
-    📅 Agende sua consulta
-  </a>
 
   <script>
     function calcular() {
