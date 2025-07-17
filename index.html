@@ -1,110 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calculadora de Gasto Calórico - Gabriel Junker Nutricionista</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f8f8f8;
-      color: #0b3d4e;
-      padding: 20px;
-      max-width: 550px;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 30px;
+      max-width: 600px;
       margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     h1 {
-      color: #0b3d4e;
-      font-size: 24px;
+      color: #003840; /* azul-petróleo escuro */
       text-align: center;
+      font-size: 24px;
     }
 
-    label, select, input {
+    label {
       display: block;
-      margin-top: 15px;
-      width: 100%;
-      font-size: 16px;
+      margin: 10px 0 5px;
     }
 
-    input, select {
-      padding: 10px;
+    select, input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 5px;
     }
 
     button {
-      margin-top: 25px;
-      padding: 12px;
-      background-color: #0b3d4e;
+      background-color: #003840;
       color: white;
+      padding: 10px 15px;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       cursor: pointer;
-      font-weight: bold;
       width: 100%;
       font-size: 16px;
     }
 
     button:hover {
-      background-color: #09526a;
+      background-color: #00525d;
     }
 
-    #resultado {
-      margin-top: 25px;
-      font-size: 18px;
+    .resultado {
+      margin-top: 20px;
       font-weight: bold;
-      color: #0b3d4e;
+      font-size: 18px;
       text-align: center;
     }
-  </style>
-</head>
-<body>
-  <h1>Calculadora de Gasto Calórico<br>Gabriel Junker Nutricionista</h1>
 
-  <label for="peso">Seu peso (kg):</label>
-  <input type="number" id="peso" placeholder="Ex: 70" min="1">
-
-  <label for="tempo">Tempo da atividade (minutos):</label>
-  <input type="number" id="tempo" placeholder="Ex: 60" min="1">
-
-  <label for="atividade">Escolha a atividade:</label>
-  <select id="atividade">
-    <option value="3.0">Caminhada leve (3 km/h)</option>
-    <option value="3.5">Limpar a casa</option>
-    <option value="4.0">Caminhada moderada (5 km/h)</option>
-    <option value="5.0">Pedalar leve (16 km/h)</option>
-    <option value="6.0">Musculação vigorosa</option>
-    <option value="7.0">Subir escadas</option>
-    <option value="8.0">Aula de dança/Zumba</option>
-    <option value="8.3">Corrida leve (8 km/h)</option>
-    <option value="9.8">Corrida moderada (10 km/h)</option>
-    <option value="10.0">Pular corda leve</option>
-    <option value="12.5">Pular corda intenso</option>
-    <option value="14.0">Corrida intensa (12 km/h)</option>
-  </select>
-
-  <button onclick="calcular()">Calcular Gasto Calórico</button>
-
-  <div id="resultado"></div>
-
-  <script>
-    function calcular() {
-      const peso = parseFloat(document.getElementById('peso').value);
-      const tempo = parseFloat(document.getElementById('tempo').value);
-      const met = parseFloat(document.getElementById('atividade').value);
-
-      if (isNaN(peso) || isNaN(tempo)) {
-        document.getElementById('resultado').innerText = 
-          "Por favor, preencha todos os campos corretamente.";
-        return;
-      }
-
-      const calorias = met * peso * (tempo / 60);
-      document.getElementById('resultado').innerText = 
-        `Você gastou aproximadamente ${calorias.toFixed(0)} kcal com essa atividade.`;
+    .agendar {
+      margin-top: 30px;
+      text-align: center;
     }
-  </script>
-</body>
-</html>
